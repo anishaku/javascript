@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <form action="" name="reg" onsubmit="return fun()">
+            <label>Name</label>
+            <input type="text" name="sname" placeholder="Enter name"/>
+            <label>Mobile</label>
+            <input type="number" name="mobile" placeholder="Enter mobile"/>
+            <label>E-Mail</label>
+            <input type="email" name="email" placeholder="enter email"/>
+            <input type="submit" value="register"/>
+        </form>
+        <script>
+            function fun(){
+                var sname=document.forms["reg"]["sname"].value;
+                //var txt="hello";
+                //alert(sname);
+                if(sname=="")
+                {
+                    alert("name is mandatory");
+                }
+                else if(sname.length<3)
+                {
+                    alert("Name-minimum 3 characters");
+                }
+                else if(!isNaN(sname))
+                {
+                    alert("name-numeric not allowed");
+                }
+                else if(sname.length<3)
+                {
+                    alert("name-minimum 3 characters");
+                }
+                var mobile=document.forms["reg"]["mobile"].value;
+                if(mobile=="")
+                {
+                    alert("mobile is mandatory");
+                }
+                else if(mobile.length<11)
+                {
+                    alert("mobile-minimum 10 characters");
+                }
+            }
+        </script>
+    </body>
+</html>
