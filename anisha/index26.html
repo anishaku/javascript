@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body onload=getCurrentTime()>
+        <p id="op"></p>
+        <script>
+            function getCurrentTime()
+            {
+                var today=new Date();
+                var h=today.getHours();
+                var m=today.getMinutes();
+                m=m<10?"0"+m:m;
+                var s=today.getSeconds();
+                s=s<10?"0"+s:s;
+                setTimeout(function(){getCurrentTime(),1000});
+                document.getElementById("op").innerHTML=h+":"+m+":"+s;
+                
+            } 
+            //  document.getElementById("op").innerHTML=today;//Thu Mar 10 2022 15:06:06 GMT+0530 (India Standard Time)
+            // document.getElementById("op").innerHTML=today.getDate();//10
+            //document.getElementById("op").innerHTML=today.getDay();//4
+            // document.getElementById("op").innerHTML=today.getFullYear();//2022
+            //document.getElementById("op").innerHTML=today.getHours();//15
+            // document.getElementById("op").innerHTML=today.getMinutes();//16
+             //document.getElementById("op").innerHTML=today.getSeconds();//0
+             //document.getElementById("op").innerHTML=today.getMonth();//2(0-11)
+        </script>
+    </body>
+</html>
