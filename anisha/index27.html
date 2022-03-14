@@ -1,0 +1,253 @@
+<html>
+    <head>
+        <title></title>
+        <script>
+            function AutoFillAddress(f) {
+		  if(f.too.checked == true) {
+			f.cvill.value = f.vill.value;
+			f.cpost.value = f.post.value;
+			f.ccity.value = f.city.value;
+			f.cdist.value = f.dist.value;
+			f.cstate.value = f.state.value;
+			f.cpin.value = f.pin.value;
+		  }
+			else{
+				f.cvill.value = '';
+				f.cpost.value = '';
+				f.ccity.value = '';
+				f.cdist.value = '';
+				f.cstate.value = '';
+				f.cpin.value = '';
+			}
+		}
+        </script>
+    </head>
+    <body>
+        <form action="">
+            <p class='card-description'>Permanent Address</p>
+                    <div class='row'>
+                      <div class='col-md-6'>
+                        <div class='form-group row'>
+                          <label class='col-sm-4 col-form-label'>At/Village:</label>
+                          <div class='col-sm-8'>
+                            <input type='text' class='form-control validate[required, onlyLetterSp]' data-prompt-position='bottomLeft' name='vill' placeholder='Enter Village Name' />
+                          </div>
+                        </div>
+                      </div>
+                      <div class='col-md-6'>
+                        <div class='form-group row'>
+                          <label class='col-sm-4 col-form-label'>Post:</label>
+                          <div class='col-sm-8'>
+                            <input type='text' class='form-control validate[required, onlyLetterSp]' data-prompt-position='bottomLeft' placeholder='Enter Post Name' name='post'/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class='row'>
+                      <div class='col-md-6'>
+                        <div class='form-group row'>
+                          <label class='col-sm-4 col-form-label'>City:</label>
+                          <div class='col-sm-8'>
+                            <input type='text' class='form-control validate[required, onlyLetterSp]' data-prompt-position='bottomLeft' placeholder='Enter City Name' name='city' />
+                          </div>
+                        </div>
+                      </div>
+                      <div class='col-md-6'>
+                        <div class='form-group row'>
+                          <label class='col-sm-4 col-form-label'>District:</label>
+                          <div class='col-sm-8'>
+                            <input type='text' class='form-control validate[required, onlyLetterSp]' data-prompt-position='bottomLeft' placeholder='Enter District Name' name='dist' />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='row'>
+                      <div class='col-md-6'>
+                        <div class='form-group row'>
+                          <label class='col-sm-4 col-form-label'>State:</label>
+                          <div class='col-sm-8'>
+                            <select class='form-control validate[required]' name='state' data-prompt-position='bottomLeft'>
+                                                <option value=''>--- Choose Your State ---</option>
+                    <option value='Andaman and Nicobar Islands'>Andaman and Nicobar Islands</option>
+					<option value='Andhra Pradesh'>Andhra Pradesh</option>
+					<option value='Arunachal Pradesh'>Arunachal Pradesh</option>
+					<option value='Assam'>Assam</option>
+					<option value='Bihar'>Bihar</option>
+					<option value='Chandigarh'>Chandigarh</option>
+					<option value='Chhattisgarh'>Chhattisgarh</option>
+					<option value='Dadra and Nagar Haveli'>Dadra and Nagar Haveli</option>
+					<option value='Daman and Diu'>Daman and Diu</option>
+					<option value='Delhi'>Delhi</option>
+					<option value='Goa'>Goa</option>
+					<option value='Gujarat'>Gujarat</option>
+					<option value='Haryana'>Haryana</option>
+					<option value='Himachal Pradesh'>Himachal Pradesh</option>
+					<option value='Jammu and Kashmir'>Jammu and Kashmir</option>
+                    <option value='Jharkhand'>Jharkhand</option>
+					<option value='Karnataka'>Karnataka</option>
+					<option value='Kerala'>Kerala</option>
+					<option value='Lakshadweep'>Lakshadweep</option>
+					<option value='Madhya Pradesh'>Madhya Pradesh</option>
+					<option value='Maharashtra'>Maharashtra</option>
+					<option value='Manipur'>Manipur</option>
+					<option value='Meghalaya'>Meghalaya</option>
+					<option value='Mizoram'>Mizoram</option>
+					<option value='Nagaland'>Nagaland</option>
+					<option value='Orissa'>Orissa</option>
+					<option value='Pondicherry'>Pondicherry</option>
+					<option value='Punjab'>Punjab</option>
+					<option value='Rajasthan'>Rajasthan</option>
+					<option value='Sikkim'>Sikkim</option>
+					<option value='Tamil Nadu'>Tamil Nadu</option>
+					<option value='Tripura'>Tripura</option>
+					<option value='Uttaranchal'>Uttaranchal</option>
+					<option value='Uttar Pradesh'>Uttar Pradesh</option>
+					<option value='West Bengal'>West Bengal</option>
+                                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class='col-md-6'>
+                        <div class='form-group row'>
+                          <label class='col-sm-4 col-form-label'>Pin Code:</label>
+                          <div class='col-sm-8'>
+                            <input name='pin' type='text' class='form-control validate[required,custom[pin]] text-input' placeholder='Enter Pin Code' data-prompt-position='bottomLeft' data-inputmask='"mask": "999999"' data-mask>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+                  	
+				     <p class='card-description'>Local Address</p><div class='row'>
+  							<div class='col-md-12'>
+    						<input type='checkbox' style='padding-top:0px !important;' class='' name='too' onchange="AutoFillAddress(this.form)"><span style='color:#FF0033; padding-top:25px !important;'> Same as Permanent Address.</span>
+							</div>
+    						
+						</div>
+					 
+					
+                    <div class='row'>
+                      <div class='col-md-6'>
+                        <div class='form-group row'>
+                          <label class='col-sm-4 col-form-label'>At/Village:</label>
+                          <div class='col-sm-8'>
+                            <input type='text' class='form-control validate[required, onlyLetterSp]' data-prompt-position='bottomLeft' name='cvill' placeholder='Enter Village Name' />
+                          </div>
+                        </div>
+                      </div>
+                      <div class='col-md-6'>
+                        <div class='form-group row'>
+                          <label class='col-sm-4 col-form-label'>Post:</label>
+                          <div class='col-sm-8'>
+                            <input type='text' class='form-control validate[required, onlyLetterSp]' data-prompt-position='bottomLeft' placeholder='Enter Post Name' name='cpost'/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+ 					
+                     <div class='row'>
+                      <div class='col-md-6'>
+                        <div class='form-group row'>
+                          <label class='col-sm-4 col-form-label'>City:</label>
+                          <div class='col-sm-8'>
+                            <input type='text' class='form-control validate[required, onlyLetterSp]' data-prompt-position='bottomLeft' name='ccity' placeholder='Enter City Name' />
+                          </div>
+                        </div>
+                      </div>
+                      <div class='col-md-6'>
+                        <div class='form-group row'>
+                          <label class='col-sm-4 col-form-label'>District:</label>
+                          <div class='col-sm-8'>
+                            <input type='text' class='form-control validate[required, onlyLetterSp]' data-prompt-position='bottomLeft' placeholder='Enter District Name' name='cdist'/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+					<div class='row'>
+                      <div class='col-md-6'>
+                        <div class='form-group row'>
+                          <label class='col-sm-4 col-form-label'>State:</label>
+                          <div class='col-sm-8'>
+                            <select class='form-control validate[required]' name='cstate' data-prompt-position='bottomLeft'>
+                                                <option value=''>--- Choose Your State ---</option>
+                    <option value='Andaman and Nicobar Islands'>Andaman and Nicobar Islands</option>
+					<option value='Andhra Pradesh'>Andhra Pradesh</option>
+					<option value='Arunachal Pradesh'>Arunachal Pradesh</option>
+					<option value='Assam'>Assam</option>
+					<option value='Bihar'>Bihar</option>
+					<option value='Chandigarh'>Chandigarh</option>
+					<option value='Chhattisgarh'>Chhattisgarh</option>
+					<option value='Dadra and Nagar Haveli'>Dadra and Nagar Haveli</option>
+					<option value='Daman and Diu'>Daman and Diu</option>
+					<option value='Delhi'>Delhi</option>
+					<option value='Goa'>Goa</option>
+					<option value='Gujarat'>Gujarat</option>
+					<option value='Haryana'>Haryana</option>
+					<option value='Himachal Pradesh'>Himachal Pradesh</option>
+					<option value='Jammu and Kashmir'>Jammu and Kashmir</option>
+                    <option value='Jharkhand'>Jharkhand</option>
+					<option value='Karnataka'>Karnataka</option>
+					<option value='Kerala'>Kerala</option>
+					<option value='Lakshadweep'>Lakshadweep</option>
+					<option value='Madhya Pradesh'>Madhya Pradesh</option>
+					<option value='Maharashtra'>Maharashtra</option>
+					<option value='Manipur'>Manipur</option>
+					<option value='Meghalaya'>Meghalaya</option>
+					<option value='Mizoram'>Mizoram</option>
+					<option value='Nagaland'>Nagaland</option>
+					<option value='Orissa'>Orissa</option>
+					<option value='Pondicherry'>Pondicherry</option>
+					<option value='Punjab'>Punjab</option>
+					<option value='Rajasthan'>Rajasthan</option>
+					<option value='Sikkim'>Sikkim</option>
+					<option value='Tamil Nadu'>Tamil Nadu</option>
+					<option value='Tripura'>Tripura</option>
+					<option value='Uttaranchal'>Uttaranchal</option>
+					<option value='Uttar Pradesh'>Uttar Pradesh</option>
+					<option value='West Bengal'>West Bengal</option>
+                                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class='col-md-6'>
+                        <div class='form-group row'>
+                          <label class='col-sm-4 col-form-label'>Pin Code:</label>
+                          <div class='col-sm-8'>
+                            <input name='cpin' type='text' class='form-control validate[required,custom[pin]] text-input' placeholder='Enter Pin Code' data-prompt-position='bottomLeft' data-inputmask='"mask": "999999"' data-mask>
+                          </div>
+                        </div>
+                      </div>
+					 </div>
+					  <div class='row'>
+					  
+						  <div class='col-6'>
+							<button type='submit' class='btn btn-success mr-2 pull-right'><i class='fa fa-send'></i> Submit</button>
+						</div>
+						<div class='col-6'>
+							<button class='btn btn-danger pull-left'><i class='fa fa-cancel'></i> Cancel</button>
+						</div>
+                    </div>                    					
+                  </form>
+                </div>
+              </div>
+            </div>
+        </form>
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src="jquery.inputmask.js" type="text/javascript"></script>
+        <script src="jquery.inputmask.date.extensions.js" type="text/javascript"></script>
+        <script src="jquery.inputmask.extensions.js" type="text/javascript"></script>
+         <!-- Page script -->
+         <script type="text/javascript">
+            $(function() {
+                //Datemask dd/mm/yyyy
+                $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
+                //Datemask2 mm/dd/yyyy
+                $("#datemask2").inputmask("mm/dd/yyyy", {"placeholder": "mm/dd/yyyy"});
+                //Money Euro
+                $("[data-mask]").inputmask();
+
+            });
+        </script>
+    </body>
+</html>
